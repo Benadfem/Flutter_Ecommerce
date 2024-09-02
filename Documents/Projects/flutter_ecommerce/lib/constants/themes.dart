@@ -17,4 +17,13 @@ class AppTheme {
     color: Colors.grey.shade500,
     fontSize: 12.0,
   );
+
+  static const bHeadingOne = TextStyle(
+    fontSize: 18.0,
+    fontWeight: FontWeight.bold,
+  );
+
+  static TextStyle bSeeAll = TextStyle(
+    color: bPrimaryColor,
+  );
 }

@@ -5,6 +5,7 @@ import 'package:gap/gap.dart';
 
 import '../constants/themes.dart';
 import '../constants/widgets/ads_banner_widget.dart';
+import '../constants/widgets/chip_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -31,15 +32,55 @@ class HomePage extends StatelessWidget {
         ],
       ),
       drawer: const Drawer(),
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(15),
+          padding: const EdgeInsets.all(15),
           child: Column(
             children: [
               //ads banner section
-              AdsBannerWidget()
+              const AdsBannerWidget(),
               // chip section
+              SizedBox(
+                height: 60.0,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  shrinkWrap: true,
+                  children: const [
+                    ChipWidget(chipLabel: "All"),
+                    ChipWidget(chipLabel: "Computers"),
+                    ChipWidget(chipLabel: "Headset"),
+                    ChipWidget(chipLabel: "Accesories"),
+                    ChipWidget(chipLabel: "Printing"),
+                    ChipWidget(chipLabel: "Cameras"),
+                  ],
+                ),
+              ),
               //hot sales section
+              const Gap(5.0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'HotSales',
+                    style: AppTheme.bHeadingOne,
+                  ),
+                  Text(
+                    'SeeAll',
+                    style: AppTheme.bSeeAll,
+                  )
+                ],
+              ),
+              const Gap(12),
+              Container(
+                color: Colors.amber,
+                height: 270,
+                child: ListView.builder(
+                  itemCount: 5,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) => const Text('sampleText'),
+                ),
+              ),
+
               //featured sections
             ],
           ),
