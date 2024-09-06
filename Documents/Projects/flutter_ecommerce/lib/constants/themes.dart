@@ -26,4 +26,8 @@ class AppTheme {
   static TextStyle bSeeAll = TextStyle(
     color: bPrimaryColor,
   );
+  static const bCardTitle = TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+  );
 }

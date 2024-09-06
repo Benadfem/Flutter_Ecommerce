@@ -6,6 +6,7 @@ import 'package:gap/gap.dart';
 import '../constants/themes.dart';
 import '../constants/widgets/ads_banner_widget.dart';
 import '../constants/widgets/chip_widget.dart';
+import '../constants/widgets/product_card_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -65,21 +66,13 @@ class HomePage extends StatelessWidget {
                     style: AppTheme.bHeadingOne,
                   ),
                   Text(
-                    'SeeAll',
+                    'See all',
                     style: AppTheme.bSeeAll,
                   )
                 ],
               ),
-              const Gap(12),
-              Container(
-                color: Colors.amber,
-                height: 270,
-                child: ListView.builder(
-                  itemCount: 5,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) => const Text('sampleText'),
-                ),
-              ),
+
+              const ProductCardWidget(),
 
               //featured sections
             ],
