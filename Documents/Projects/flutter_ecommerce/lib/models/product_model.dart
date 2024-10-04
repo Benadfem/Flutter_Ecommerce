@@ -2,10 +2,10 @@ class ProductModel {
   final int pid;
   final String imgUrl;
   final String title;
-  final String price;
+  final double price;
   final String shortDescription;
   final String longDescription;
-  final int reviews;
+  final int review;
   final double rating;
   bool isSelected;
   int qty;
@@ -17,7 +17,7 @@ class ProductModel {
     required this.price,
     required this.shortDescription,
     required this.longDescription,
-    required this.reviews,
+    required this.review,
     required this.rating,
     this.isSelected = false,
     this.qty = 1,
